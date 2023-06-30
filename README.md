@@ -2,25 +2,26 @@
 
 A Twitter clone project that aims to replicate some functionalities of the Twitter platform.
 
-![[TwitterStartingpagenot loggedin.png]]
 
-![[ProfilePage.png]]
+![](Attachments/TwitterStartingpagenotloggedin.png)
 
-![[ProfilePagewithTweet.png]]
+![](Attachments/ProfilePage.png)
+
+![](Attachments/ProfilePagewithTweet.png)
 
 ## Edit Profile Page
 
-![[EditProfilePage.png]]
+![](Attachments/EditProfilePage.png)
 
 ## Notification Feature
 
-![[NotificationFeature.png]]
+![](Attachments/NotificationFeature.png)
 
-![[NotificationPage2.png]]
+![](Attachments/NotificationPage2.png)
 
 ## Following other users
 
-![[FollowingOtherUsers.png]]
+![](Attachments/FollowingOtherUsers.png)
 
 
 
