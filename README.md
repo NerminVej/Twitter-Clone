@@ -14,3 +14,20 @@ The Twitter clone project is aimed at replicating some key functionalities of th
 
 1. Clone the repository:
 
+   git clone https://github.com/NerminVej/Twitter-Clone.git
+
+2. Install dependencies:
+   cd Twitter-Clone
+   npm install
+
+3. Set up the database:
+
+   Create a MongoDB database.
+
+   Set the database connection URL in .env file:
+   MONGODB_URI=your-mongodb-connection-url
+
+4. Start the development server:
+   npm run dev
+
+5. Open your browser and visit http://localhost:3000 to access the application.
