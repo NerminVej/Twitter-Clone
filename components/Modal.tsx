@@ -1,3 +1,30 @@
+/*
+  Modal Component
+
+  This component represents a modal dialog box.
+  It can be used to display custom content with a title, body, and footer section.
+  The modal can be opened or closed using the `isOpen` prop.
+  The `onClose` prop is a callback function triggered when the modal is closed.
+  The `onSubmit` prop is a callback function triggered when the modal's submit button is clicked.
+  The `title` prop represents the title of the modal.
+  The `body` prop represents the main content of the modal.
+  The `footer` prop represents the optional footer content of the modal.
+  The `actionLabel` prop specifies the label of the submit button.
+  The `disabled` prop disables the submit button if set to true.
+
+  Usage:
+  <Modal
+    isOpen={isOpen}
+    onClose={handleClose}
+    onSubmit={handleSubmit}
+    title="Modal Title"
+    body={<div>Modal Content</div>}
+    footer={<div>Modal Footer</div>}
+    actionLabel="Submit"
+    disabled={isDisabled}
+  />
+*/
+
 import { useCallback } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button";
@@ -45,60 +72,15 @@ const Modal: React.FC<ModalProps> = ({
 
   return (
     <>
-      <div
-        className="
-          justify-center 
-          items-center 
-          flex 
-          overflow-x-hidden 
-          overflow-y-auto 
-          fixed 
-          inset-0 
-          z-50 
-          outline-none 
-          focus:outline-none
-          bg-neutral-800
-          bg-opacity-70
-        "
-      >
+      <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-neutral-800 bg-opacity-70">
         <div className="relative w-full lg:w-3/6 my-6 mx-auto lg:max-w-3xl h-full lg:h-auto">
           {/*content*/}
-          <div
-            className="
-            h-full
-            lg:h-auto
-            border-0 
-            rounded-lg 
-            shadow-lg 
-            relative 
-            flex 
-            flex-col 
-            w-full 
-            bg-black 
-            outline-none 
-            focus:outline-none
-            "
-          >
+          <div className="h-full lg:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none">
             {/*header*/}
-            <div
-              className="
-              flex 
-              items-center 
-              justify-between 
-              p-10 
-              rounded-t
-              "
-            >
+            <div className="flex items-center justify-between p-10 rounded-t">
               <h3 className="text-3xl font-semibold text-white">{title}</h3>
               <button
-                className="
-                  p-1 
-                  ml-auto
-                  border-0 
-                  text-white 
-                  hover:opacity-70
-                  transition
-                "
+                className="p-1 ml-auto border-0 text-white hover:opacity-70 transition"
                 onClick={handleClose}
               >
                 <AiOutlineClose size={20} />

@@ -1,3 +1,19 @@
+/*
+  User API
+
+  This API route handles fetching user information and follower count.
+  It expects a GET request with a valid user ID to fetch user information and follower count.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+
+  Example:
+  // pages/api/user/[userId].ts
+  import userHandler from '@/api/user-handler';
+
+  export default userHandler;
+*/
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 import prisma from "@/libs/prismadb";

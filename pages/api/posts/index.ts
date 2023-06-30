@@ -1,3 +1,19 @@
+/*
+  Post API
+
+  This API route handles creating a new post and fetching posts.
+  It expects a POST request to create a new post and a GET request to fetch posts.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+
+  Example:
+  // pages/api/posts/index.ts
+  import postHandler from '@/api/post-handler';
+
+  export default postHandler;
+*/
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 import serverAuth from "@/libs/serverAuth";
@@ -28,8 +44,6 @@ export default async function handler(
 
     if (req.method === "GET") {
       const { userId } = req.query;
-
-      console.log({ userId });
 
       let posts;
 

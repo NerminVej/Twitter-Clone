@@ -1,3 +1,13 @@
+/*
+  ImageUpload Component
+
+  This component represents an image upload dropzone.
+  It allows the user to upload an image file and displays the uploaded image preview.
+
+  Usage:
+  <ImageUpload onChange={handleImageChange} label="Upload Image" value={imageBase64} disabled={false} />
+*/
+
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";

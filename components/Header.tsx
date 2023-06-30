@@ -1,3 +1,13 @@
+/*
+  Header Component
+
+  This component represents a header with a title and an optional back arrow.
+  It is used to display the title and provide navigation functionality.
+
+  Usage:
+  <Header showBackArrow={true} label="Header Title" />
+*/
+
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 import { BiArrowBack } from "react-icons/bi";

@@ -1,3 +1,19 @@
+/*
+  Users API
+
+  This API route handles fetching all users.
+  It expects a GET request to fetch all users.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+
+  Example:
+  // pages/api/users.ts
+  import usersHandler from '@/api/users-handler';
+
+  export default usersHandler;
+*/
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 import prisma from "@/libs/prismadb";

@@ -1,3 +1,13 @@
+/*
+  Post API
+
+  This API route handles fetching a specific post by ID.
+  It expects a GET request with the `postId` parameter in the query string.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+*/
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 import prisma from "@/libs/prismadb";

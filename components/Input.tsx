@@ -1,3 +1,20 @@
+/*
+  Input Component
+
+  This component represents an input field.
+  It can be used to capture user input and display a label.
+
+  Usage:
+  <Input
+    placeholder="Enter a value"
+    value={inputValue}
+    type="text"
+    onChange={handleInputChange}
+    disabled={false}
+    label="Input Label"
+  />
+*/
+
 interface InputProps {
   placeholder?: string;
   value?: string;

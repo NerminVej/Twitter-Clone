@@ -1,3 +1,10 @@
+/**
+    The Form component is responsible for rendering a form for creating a new tweet or comment.
+    It provides a textarea for entering the tweet or comment body and handles the submission of the form.
+    If the user is logged in, it displays the user's avatar, textarea, and a tweet button.
+    If the user is not logged in, it displays a welcome message and login/register buttons.
+*/
+
 import axios from "axios";
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";

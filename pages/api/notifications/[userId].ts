@@ -1,20 +1,30 @@
-import { NextApiRequest, NextApiResponse } from "next";
+/*
+  Notifications API
 
-import prisma from "@/libs/prismadb";
+  This API route handles fetching notifications for a specific user ID.
+  It expects a GET request with the `userId` parameter in the query string.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+*/
+
+import { NextApiRequest, NextApiResponse } from 'next';
+
+import prisma from '@/libs/prismadb';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== "GET") {
+  if (req.method !== 'GET') {
     return res.status(405).end();
   }
 
   try {
     const { userId } = req.query;
 
-    if (!userId || typeof userId !== "string") {
-      throw new Error("Invalid ID");
+    if (!userId || typeof userId !== 'string') {
+      throw new Error('Invalid ID');
     }
 
     const notifications = await prisma.notification.findMany({
@@ -22,7 +32,7 @@ export default async function handler(
         userId,
       },
       orderBy: {
-        createdAt: "desc",
+        createdAt: 'desc',
       },
     });
 

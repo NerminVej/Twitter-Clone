@@ -1,3 +1,15 @@
+/*
+  UserBio Component
+
+  This component displays the user's bio information, including their name, username, bio, join date, and follower/following counts. It also provides the functionality to follow/unfollow the user and edit the user's profile (for the logged-in user).
+
+  Props:
+  - userId: The ID of the user whose bio is being displayed.
+
+  Usage:
+  <UserBio userId={userId} />
+*/
+
 import { useMemo } from "react";
 import { BiCalendar } from "react-icons/bi";
 import { format } from "date-fns";
@@ -52,16 +64,7 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
         </div>
         <div className="flex flex-col mt-4">
           <p className="text-white">{fetchedUser?.bio}</p>
-          <div
-            className="
-              flex 
-              flex-row 
-              items-center 
-              gap-2 
-              mt-4 
-              text-neutral-500
-          "
-          >
+          <div className="flex flex-row items-center gap-2 mt-4 text-neutral-500">
             <BiCalendar size={24} />
             <p>Joined {createdAt}</p>
           </div>

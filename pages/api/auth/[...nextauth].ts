@@ -1,3 +1,19 @@
+/*
+  NextAuth Configuration
+
+  This file contains the configuration for NextAuth authentication.
+  It uses the CredentialsProvider to handle email/password authentication.
+
+  Usage:
+  This file is typically used in the authentication setup of the application.
+
+  Example:
+  // pages/api/auth/[...nextauth].ts
+  import NextAuthConfig from '@/config/next-auth-config';
+
+  export default NextAuthConfig;
+*/
+
 import bcrypt from "bcrypt";
 import NextAuth, { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";

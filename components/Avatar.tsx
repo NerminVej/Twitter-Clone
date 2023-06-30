@@ -1,3 +1,17 @@
+/*
+  Avatar Component
+
+  This component displays a user's avatar image.
+
+  Props:
+  - userId: The ID of the user whose avatar is being displayed.
+  - isLarge: (optional) Indicates whether the avatar should be displayed in a large size.
+  - hasBorder: (optional) Indicates whether the avatar should have a border.
+
+  Usage:
+  <Avatar userId={userId} isLarge hasBorder />
+*/
+
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useCallback } from "react";

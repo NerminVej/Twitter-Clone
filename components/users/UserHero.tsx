@@ -1,3 +1,15 @@
+/*
+  UserHero Component
+
+  This component displays the user's hero section, including the cover image and avatar.
+
+  Props:
+  - userId: The ID of the user whose hero section is being displayed.
+
+  Usage:
+  <UserHero userId={userId} />
+*/
+
 import Image from "next/image";
 
 import useUser from "@/hooks/useUser";

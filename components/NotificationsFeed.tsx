@@ -1,5 +1,16 @@
-import { BsTwitter } from "react-icons/bs";
+/*
+  NotificationsFeed Component
 
+  This component displays a feed of notifications.
+  It fetches notifications for the current user using the `useNotifications` hook.
+  It also uses the `useCurrentUser` hook to get the current user data.
+  The notifications are rendered in a list format.
+
+  Usage:
+  <NotificationsFeed />
+*/
+
+import { BsTwitter } from "react-icons/bs";
 import useNotifications from "@/hooks/useNotifications";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { useEffect } from "react";

@@ -1,8 +1,18 @@
+/*
+  Layout Component
+
+  This component represents the overall layout of the application.
+  It consists of a sidebar, main content area, and a follow bar.
+
+  Usage:
+  <Layout>
+    // Content goes here
+  </Layout>
+*/
+
 import React from "react";
 import Sidebar from "./layout/Sidebar";
 import FollowBar from "./layout/FollowBar";
-
-
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

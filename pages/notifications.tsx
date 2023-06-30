@@ -1,3 +1,12 @@
+/*
+  Notifications Page
+
+  This is the notifications page component. It renders the header with a back arrow and the label "Notifications", and a notifications feed.
+
+  Usage:
+  This component is typically used as the main component in the notifications page.
+*/
+
 import Header from "@/components/Header";
 import NotificationsFeed from "@/components/NotificationsFeed";
 import useCurrentUser from "@/hooks/useCurrentUser";
