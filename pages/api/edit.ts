@@ -1,3 +1,13 @@
+/*
+  UpdateProfile API
+
+  This API route updates the user profile.
+  It expects a PATCH request.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+*/
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 import serverAuth from "@/libs/serverAuth";

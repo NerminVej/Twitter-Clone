@@ -1,13 +1,29 @@
-import { NextApiRequest, NextApiResponse } from "next";
+/*
+  Comment API
 
-import serverAuth from "@/libs/serverAuth";
-import prisma from "@/libs/prismadb";
+  This API route handles creating a comment on a post.
+  It expects a POST request with the comment body and post ID.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+
+  Example:
+  // pages/api/comments/[postId].ts
+  import commentHandler from '@/api/comment-handler';
+
+  export default commentHandler;
+*/
+
+import { NextApiRequest, NextApiResponse } from 'next';
+
+import serverAuth from '@/libs/serverAuth';
+import prisma from '@/libs/prismadb';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== 'POST') {
     return res.status(405).end();
   }
 
@@ -16,8 +32,8 @@ export default async function handler(
     const { body } = req.body;
     const { postId } = req.query;
 
-    if (!postId || typeof postId !== "string") {
-      throw new Error("Invalid ID");
+    if (!postId || typeof postId !== 'string') {
+      throw new Error('Invalid ID');
     }
 
     const comment = await prisma.comment.create({
@@ -39,7 +55,7 @@ export default async function handler(
       if (post?.userId) {
         await prisma.notification.create({
           data: {
-            body: "Someone replied on your tweet!",
+            body: 'Someone replied on your tweet!',
             userId: post.userId,
           },
         });

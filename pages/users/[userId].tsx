@@ -1,3 +1,14 @@
+/*
+  UserView Component
+
+  This component displays the details of a user, including their bio and posts.
+  It uses the useUser custom hook to fetch the user data.
+  It renders a loading spinner while the data is being fetched.
+
+  Usage:
+  Import the UserView component and use it in your React application.
+*/
+
 import { useRouter } from "next/router";
 import { ClipLoader } from "react-spinners";
 

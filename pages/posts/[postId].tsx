@@ -1,3 +1,14 @@
+/*
+  PostView Component
+
+  This component displays the details of a post and its comments.
+  It uses the usePost custom hook to fetch the post data.
+  It renders a loading spinner while the data is being fetched.
+
+  Usage:
+  Import the PostView component and use it in your React application.
+*/
+
 import { useRouter } from "next/router";
 import { ClipLoader } from "react-spinners";
 

@@ -1,3 +1,13 @@
+/*
+  Signup API
+
+  This API route handles user signup.
+  It expects a POST request.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+*/
+
 import bcrypt from "bcrypt";
 import { NextApiRequest, NextApiResponse } from "next";
 

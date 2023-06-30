@@ -1,3 +1,13 @@
+/*
+  FollowUser API
+
+  This API route handles following and unfollowing users.
+  It expects a POST or DELETE request.
+
+  Usage:
+  This file is typically used as an API route in Next.js.
+*/
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 import prisma from "@/libs/prismadb";

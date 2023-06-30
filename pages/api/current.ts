@@ -1,9 +1,22 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+/*
+  CurrentUser API
 
-import serverAuth from '@/libs/serverAuth';
+  This API route returns the currently logged-in user.
+  It expects a GET request.
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  Usage:
+  This file is typically used as an API route in Next.js.
+*/
+
+import { NextApiRequest, NextApiResponse } from "next";
+
+import serverAuth from "@/libs/serverAuth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "GET") {
     return res.status(405).end();
   }
 
