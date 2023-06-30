@@ -14,11 +14,11 @@ The Twitter clone project is aimed at replicating some key functionalities of th
 
 1. Clone the repository:
 
-   git clone https://github.com/NerminVej/Twitter-Clone.git
+   `git clone https://github.com/NerminVej/Twitter-Clone.git`
 
 2. Install dependencies:
-   cd Twitter-Clone
-   npm install
+   `   cd Twitter-Clone
+   npm install`
 
 3. Set up the database:
 
