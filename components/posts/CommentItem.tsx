@@ -1,3 +1,15 @@
+/*
+  CommentItem Component
+
+  This component represents an individual comment item. It displays the user avatar, name, username, comment body, and the time since the comment was created.
+
+  Props:
+  - data: The comment data object.
+
+  Usage:
+  <CommentItem data={commentData} />
+*/
+
 import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
 import { formatDistanceToNowStrict } from "date-fns";
@@ -11,20 +23,20 @@ interface CommentItemProps {
 const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
   const router = useRouter();
 
+  // Function to navigate to the user's profile when clicked
   const goToUser = useCallback(
     (ev: any) => {
       ev.stopPropagation();
-
       router.push(`/users/${data.user.id}`);
     },
     [router, data.user.id]
   );
 
+  // Format the creation date of the comment
   const createdAt = useMemo(() => {
     if (!data?.createdAt) {
       return null;
     }
-
     return formatDistanceToNowStrict(new Date(data.createdAt));
   }, [data.createdAt]);
 

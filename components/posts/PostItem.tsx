@@ -1,3 +1,16 @@
+/*
+  PostItem Component
+
+  This component represents an individual post item. It displays the post content, user information, and interaction buttons like comments and likes.
+
+  Props:
+  - data: The post data object containing the post information.
+  - userId: The ID of the user associated with the post.
+
+  Usage:
+  <PostItem data={postData} userId={userId} />
+*/
+
 import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
 import { AiFillHeart, AiOutlineHeart, AiOutlineMessage } from "react-icons/ai";
@@ -6,8 +19,8 @@ import { formatDistanceToNowStrict } from "date-fns";
 import useLoginModal from "@/hooks/useLoginModal";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import useLike from "@/hooks/useLike";
-
 import Avatar from "../Avatar";
+
 interface PostItemProps {
   data: Record<string, any>;
   userId?: string;

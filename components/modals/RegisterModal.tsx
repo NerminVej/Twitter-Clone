@@ -1,3 +1,13 @@
+/*
+  RegisterModal Component
+
+  This component represents a modal for user registration.
+  It allows users to create a new account by providing their email, password, username, and name.
+  
+  Usage:
+  <RegisterModal />
+*/
+
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useCallback, useState } from "react";
@@ -33,6 +43,7 @@ const RegisterModal = () => {
     try {
       setIsLoading(true);
 
+      // Send registration request to the server
       await axios.post("/api/register", {
         email,
         password,
@@ -44,6 +55,7 @@ const RegisterModal = () => {
 
       toast.success("Account created.");
 
+      // Sign in the user using their newly created credentials
       signIn("credentials", {
         email,
         password,
@@ -99,7 +111,6 @@ const RegisterModal = () => {
             hover:underline
           "
         >
-          {" "}
           Sign in
         </span>
       </p>

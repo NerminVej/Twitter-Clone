@@ -1,5 +1,16 @@
-import usePosts from "@/hooks/usePosts";
+/*
+  PostFeed Component
 
+  This component represents a feed of posts. It fetches the posts based on the provided userId and renders PostItem components for each post.
+
+  Props:
+  - userId: The ID of the user for which to fetch the posts.
+
+  Usage:
+  <PostFeed userId={userId} />
+*/
+
+import usePosts from "@/hooks/usePosts";
 import PostItem from "./PostItem";
 
 interface PostFeedProps {

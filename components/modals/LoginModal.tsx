@@ -1,3 +1,22 @@
+/*
+  LoginModal Component
+
+  This component represents a modal for user login.
+  It allows users to sign in using their email and password.
+
+  Dependencies:
+  - next-auth/react: For handling user authentication.
+  - react: For React hooks and components.
+  - react-hot-toast: For displaying toast messages.
+  - "@/hooks/useLoginModal": A custom hook for managing the login modal state.
+  - "@/hooks/useRegisterModal": A custom hook for managing the register modal state.
+  - "../Input": A custom input component.
+  - "../Modal": A custom modal component.
+
+  Usage:
+  <LoginModal />
+*/
+
 import { signIn } from "next-auth/react";
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -20,6 +39,7 @@ const LoginModal = () => {
     try {
       setIsLoading(true);
 
+      // Sign in using email and password
       await signIn("credentials", {
         email,
         password,

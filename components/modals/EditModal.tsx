@@ -1,3 +1,13 @@
+/*
+  EditModal Component
+
+  This component represents a modal for editing the user profile.
+  It allows the user to update their profile information, including profile image, cover image, name, username, and bio.
+
+  Usage:
+  <EditModal />
+*/
+
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -22,6 +32,7 @@ const EditModal = () => {
   const [bio, setBio] = useState("");
 
   useEffect(() => {
+    // Initialize form fields with the current user data
     setProfileImage(currentUser?.profileImage);
     setCoverImage(currentUser?.coverImage);
     setName(currentUser?.name);
@@ -41,6 +52,7 @@ const EditModal = () => {
     try {
       setIsLoading(true);
 
+      // Send a patch request to update the user's profile
       await axios.patch("/api/edit", {
         name,
         username,
