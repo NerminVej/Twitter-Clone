@@ -1,3 +1,13 @@
+/*
+  SidebarTweetButton Component
+
+  This component represents the tweet button in the sidebar of your application.
+  It renders a feather icon and provides a click event to navigate to a tweet creation page.
+
+  Usage:
+  <SidebarTweetButton />
+*/
+
 import { useCallback } from "react";
 import { FaFeather } from "react-icons/fa";
 import { useRouter } from "next/router";
@@ -7,6 +17,7 @@ const SidebarTweetButton = () => {
 
   return (
     <div>
+      {/* Render the tweet button for mobile view */}
       <div
         className="
         mt-6
@@ -23,9 +34,13 @@ const SidebarTweetButton = () => {
         transition 
         cursor-pointer
       "
+        onClick={() => router.push("/create-tweet")} // Navigate to the tweet creation page when clicked
       >
-        <FaFeather size={24} color="white" />
+        <FaFeather size={24} color="white" />{" "}
+        {/* Render the feather icon with the specified size and color */}
       </div>
+
+      {/* Render the tweet button for desktop view */}
       <div
         className="
         mt-6
@@ -38,6 +53,7 @@ const SidebarTweetButton = () => {
         hover:bg-opacity-90 
         cursor-pointer
       "
+        onClick={() => router.push("/create-tweet")} // Navigate to the tweet creation page when clicked
       >
         <p
           className="

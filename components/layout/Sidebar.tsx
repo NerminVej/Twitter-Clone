@@ -1,10 +1,23 @@
+/*
+  Sidebar Component
+
+  This component represents the sidebar of your application. It provides navigation links and actions
+  such as signing out. The sidebar items are dynamically generated based on the current user's authentication
+  status and notifications.
+
+  Child Components:
+  - SidebarItem: Represents a single item in the sidebar.
+  - SidebarLogo: Renders the sidebar logo.
+  - SidebarTweetButton: Renders the tweet button.
+
+*/
+
 import { signOut } from "next-auth/react";
 import { BiLogOut } from "react-icons/bi";
 import { BsHouseFill, BsBellFill } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 
 import useCurrentUser from "@/hooks/useCurrentUser";
-
 import SidebarItem from "./SidebarItem";
 import SidebarLogo from "./SidebarLogo";
 import SidebarTweetButton from "./SidebarTweetButton";
@@ -12,6 +25,7 @@ import SidebarTweetButton from "./SidebarTweetButton";
 const Sidebar = () => {
   const { data: currentUser } = useCurrentUser();
 
+  // Define the sidebar items array
   const items = [
     {
       icon: BsHouseFill,
@@ -38,6 +52,7 @@ const Sidebar = () => {
       <div className="flex flex-col items-end">
         <div className="space-y-2 lg:w-[230px]">
           <SidebarLogo />
+          {/* Render sidebar items based on the 'items' array */}
           {items.map((item) => (
             <SidebarItem
               key={item.href}
@@ -48,6 +63,7 @@ const Sidebar = () => {
               label={item.label}
             />
           ))}
+          {/* Render the logout button if there is a current user */}
           {currentUser && (
             <SidebarItem
               onClick={() => signOut()}
