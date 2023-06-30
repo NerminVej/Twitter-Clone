@@ -1,9 +1,8 @@
-import React, { useCallback } from 'react';
+import React, { useCallback } from "react";
 import { IconType } from "react-icons";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-
-import { BsDot } from 'react-icons/bs';
+import { BsDot } from "react-icons/bs";
 
 interface SidebarItemProps {
   label: string;
@@ -14,14 +13,20 @@ interface SidebarItemProps {
   alert?: boolean;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, auth, onClick, alert }) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({
+  label,
+  icon: Icon,
+  href,
+  auth,
+  onClick,
+  alert,
+}) => {
   const router = useRouter();
 
-
-
   return (
-    <div  className="flex flex-row items-center">
-      <div className="
+    <div className="flex flex-row items-center">
+      <div
+        className="
         relative
         rounded-full 
         h-14
@@ -34,11 +39,15 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, auth
         hover:bg-opacity-10 
         cursor-pointer 
         lg:hidden
-      ">
+      "
+      >
         <Icon size={28} color="white" />
-        {alert ? <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} /> : null}
+        {alert ? (
+          <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} />
+        ) : null}
       </div>
-      <div className="
+      <div
+        className="
         relative
         hidden 
         lg:flex 
@@ -50,15 +59,16 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, auth
         hover:bg-opacity-10 
         cursor-pointer
         items-center
-      ">
+      "
+      >
         <Icon size={24} color="white" />
-        <p className="hidden lg:block text-white text-xl">
-          {label}
-        </p>
-        {alert ? <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} /> : null}
+        <p className="hidden lg:block text-white text-xl">{label}</p>
+        {alert ? (
+          <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} />
+        ) : null}
       </div>
     </div>
   );
-}
+};
 
 export default SidebarItem;
